@@ -1,7 +1,6 @@
 import re
 import os
 from setuptools import setup, find_packages
-from fbads import __version__
 
 
 def read_file(file_name):
@@ -19,7 +18,7 @@ def get_version():
 
 setup(
     name='fbads',
-    version=__version__,
+    version=get_version(),
     description=read_file('README.rst'),
     long_description='',
     classifiers=[
