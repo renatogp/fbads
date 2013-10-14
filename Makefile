@@ -1,2 +1,2 @@
 test:
-	`which python` -m unittest discover
+	`which python` -m unittest discover -v
