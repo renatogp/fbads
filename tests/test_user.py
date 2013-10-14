@@ -19,7 +19,7 @@ class FBAdsUserTestCase(unittest.TestCase):
                 }]
             })
 
-            fbads = FBAds(account_id='0123456789')
+            fbads = FBAds(account_id=123456789)
             users = fbads.user.list()
             self.assertEqual(len(users), 1)
             self.assertEqual(users[0].id, 121211)
@@ -33,9 +33,9 @@ class FBAdsUserTestCase(unittest.TestCase):
             mocked_requests.return_value.status_code = 201
             mocked_requests.return_value.content = ''
 
-            fbads = FBAds(account_id='0123456789')
+            fbads = FBAds(account_id=123456789)
             fbads.user.add(
-                uid='121211',
+                user_id='121211',
                 role=Role.ADMIN,
             )
             # no exceptions... ok!?
@@ -45,6 +45,6 @@ class FBAdsUserTestCase(unittest.TestCase):
             mocked_requests.return_value.status_code = 204
             mocked_requests.return_value.content = ''
 
-            fbads = FBAds(account_id='0123456789')
+            fbads = FBAds(account_id=123456789)
             fbads.user.delete('121211')
             # no exceptions... ok!?

@@ -1,14 +1,31 @@
 # coding: utf-8
+import dateutil.parser
+from decimal import Decimal
 
 
 class Resource(object):
-    def __init__(self, manager, data, fields=[], exclude=[]):
+    datetime_fields = []
+    cents_to_decimal = []
+
+    def __init__(self, manager, data):
         self.manager = manager
         self._data = data
         self._set_attributes()
 
     def _set_attributes(self):
         for k, v in self._data.iteritems():
+            if k in self.cents_to_decimal:
+                """
+                Convert from cents to dollar (Decimal)
+                """
+                v = v / Decimal('100.00')
+
+            elif k in self.datetime_fields:
+                """
+                If defined as date field, instantiate a Python datetime object
+                """
+                v = dateutil.parser.parse(v)
+
             setattr(self, k, v)
 
     def __getattr__(self, k):

@@ -7,13 +7,13 @@ class UserManager(Manager):
     resource_class = UserResource
     resource_name = 'aduser'
 
-    def add(self, uid, role):
+    def add(self, user_id, role):
         return super(UserManager, self).add(
             payload={
-                'uid': uid,
+                'uid': user_id,
                 'role': role,
             }
         )
 
-    def delete(self, uid):
-        return super(UserManager, self).delete(object_id=uid)
+    def delete(self, user_id):
+        return super(UserManager, self).delete(object_id=user_id)

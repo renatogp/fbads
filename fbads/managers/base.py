@@ -10,23 +10,30 @@ class Manager(object):
     def __init__(self, api):
         self._api = api
 
-    def list(self):
+    def list(self, fields=[]):
         url = GRAPH_API_URL + 'act_{0}/{1}?access_token={2}'.format(
             self._api.account_id,
             self.resource_name,
             self._api.access_token,
         )
 
+        if fields:
+            url += '&fields={0}'.format(','.join(fields))
+
         response = self._api.client.get(url)
+
         return [self._dict_to_resource(r) for r in response['data']]
 
-    def get(self, object_id):
+    def get(self, object_id, fields=[]):
         url = GRAPH_API_URL + 'act_{0}/{1}/{2}?access_token={3}'.format(
             self._api.account_id,
             self.resource_name,
             object_id,
             self._api.access_token,
         )
+
+        if fields:
+            url += '&fields={0}'.format(','.join(fields))
 
         response = self._api.client.get(url)
         return self._dict_to_resource(response)
@@ -44,13 +51,11 @@ class Manager(object):
 
         return self._api.client.delete(url)
 
-    def _dict_to_resource(self, data, resource_class=None, fields=[], exclude=[]):
+    def _dict_to_resource(self, data, resource_class=None):
         """
         Convert a dict to a `resource_class` instance
         """
         return (resource_class or self.resource_class)(
             self,
             data,
-            fields=fields,
-            exclude=exclude,
         )
