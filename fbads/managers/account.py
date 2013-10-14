@@ -5,7 +5,9 @@ from fbads.resources.account import AccountResource
 
 class AccountManager(Manager):
     resource_class = AccountResource
-    resource_name = 'adaccount'
+
+    def _get_api_path(self, object_id):
+        return 'act_{0}'.format(self._api.account_id)
 
     def list(self, *args, **kwargs):
         raise NotImplementedError()

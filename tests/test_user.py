@@ -1,11 +1,11 @@
 # coding: utf-8
 import json
-import unittest
 from mock import patch
 from fbads import FBAds
+from tests import BaseTestCase
 
 
-class FBAdsUserTestCase(unittest.TestCase):
+class FBAdsUserTestCase(BaseTestCase):
     def test_list_users(self):
         with patch('requests.get') as mocked_requests:
             mocked_requests.return_value.status_code = 200

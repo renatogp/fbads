@@ -1,13 +1,13 @@
 # coding: utf-8
 import json
-import unittest
 from datetime import datetime
 from decimal import Decimal
 from mock import patch
 from fbads import FBAds
+from tests import BaseTestCase
 
 
-class FBAdsCampaignTestCase(unittest.TestCase):
+class FBAdsCampaignTestCase(BaseTestCase):
     # def test_list_campaigns(self):
     #     fbads = FBAds(account_id=123456789)
     #     self.assertRaises(NotImplementedError, fbads.account.list)

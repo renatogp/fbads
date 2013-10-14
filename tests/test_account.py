@@ -1,11 +1,11 @@
 # coding: utf-8
 import json
-import unittest
 from mock import patch
 from fbads import FBAds
+from tests import BaseTestCase
 
 
-class FBAdsAccountTestCase(unittest.TestCase):
+class FBAdsAccountTestCase(BaseTestCase):
     def test_list_accounts(self):
         fbads = FBAds(account_id=123456789)
         self.assertRaises(NotImplementedError, fbads.account.list)

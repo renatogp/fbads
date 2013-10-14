@@ -7,6 +7,9 @@ class CampaignManager(Manager):
     resource_class = CampaignResource
     resource_name = 'adcampaign'
 
+    def _get_api_path(self, object_id):
+        return '{0}'.format(object_id)
+
     def list(self, fields=['id', 'name', 'start_time', 'end_time', 'daily_budget', 'lifetime_budget']):
         return super(CampaignManager, self).list(fields=fields)
 

@@ -10,10 +10,23 @@ class Manager(object):
     def __init__(self, api):
         self._api = api
 
+    def _add_api_path(self):
+        return 'act_{0}/{1}'.format(self._api.account_id, self.resource_name)
+
+    def _list_api_path(self):
+        return 'act_{0}/{1}'.format(self._api.account_id, self.resource_name)
+
+    def _get_api_path(self, object_id):
+        return 'act_{0}/{1}/{2}'.format(self._api.account_id, self.resource_name, object_id)
+
+    def _delete_api_path(self, object_id):
+        # usually get and delete URLs are the same
+        return self._get_api_path(object_id)
+
     def list(self, fields=[]):
-        url = GRAPH_API_URL + 'act_{0}/{1}?access_token={2}'.format(
-            self._api.account_id,
-            self.resource_name,
+        url = '{0}{1}?access_token={2}'.format(
+            GRAPH_API_URL,
+            self._list_api_path(),
             self._api.access_token,
         )
 
@@ -25,10 +38,9 @@ class Manager(object):
         return [self._dict_to_resource(r) for r in response['data']]
 
     def get(self, object_id, fields=[]):
-        url = GRAPH_API_URL + 'act_{0}/{1}/{2}?access_token={3}'.format(
-            self._api.account_id,
-            self.resource_name,
-            object_id,
+        url = '{0}{1}?access_token={2}'.format(
+            GRAPH_API_URL,
+            self._get_api_path(object_id),
             self._api.access_token,
         )
 
@@ -39,13 +51,18 @@ class Manager(object):
         return self._dict_to_resource(response)
 
     def add(self, payload, url=None):
+        url = '{0}{1}?access_token={2}'.format(
+            GRAPH_API_URL,
+            self._add_api_path(),
+            self._api.access_token,
+        )
+
         return self._api.client.post(url, payload)
 
     def delete(self, object_id):
-        url = GRAPH_API_URL + 'act_{0}/{1}/{2}?access_token={3}'.format(
-            self._api.account_id,
-            self.resource_name,
-            object_id,
+        url = '{0}{1}?access_token={2}'.format(
+            GRAPH_API_URL,
+            self._delete_api_path(object_id),
             self._api.access_token,
         )
 
