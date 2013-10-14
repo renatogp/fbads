@@ -16,8 +16,11 @@ class Manager(object):
         response = self._api.client.get(url)
         return self._dict_to_resource(response)
 
-    def put(self, url, payload):
-        return self.ml.client.put(url, payload)
+    def add(self, payload, url=None):
+        return self._api.client.post(url, payload)
+
+    def delete(self, object_id=None, url=None):
+        return self._api.client.delete(url)
 
     def _dict_to_resource(self, data, resource_class=None, fields=[], exclude=[]):
         """
