@@ -5,7 +5,7 @@ from fbads.resources.user import UserResource
 
 class UserManager(Manager):
     resource_class = UserResource
-    resource_name = 'user'
+    resource_name = 'aduser'
 
     def add(self, uid, role):
         return super(UserManager, self).add(
