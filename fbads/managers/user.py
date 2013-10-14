@@ -14,6 +14,3 @@ class UserManager(Manager):
                 'role': role,
             }
         )
-
-    def delete(self, user_id):
-        return super(UserManager, self).delete(object_id=user_id)

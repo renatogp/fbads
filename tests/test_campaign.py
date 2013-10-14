@@ -34,11 +34,28 @@ class FBAdsCampaignTestCase(unittest.TestCase):
             self.assertEqual(campaign.daily_budget, Decimal('12.34'))
             self.assertEqual(campaign.lifetime_budget, Decimal('123.45'))
 
+    def test_add_campaign(self):
+        from fbads.resources.campaign import CampaignStatus
 
-    # def test_add_campaign(self):
-    #     fbads = FBAds(account_id=123456789)
-    #     self.assertRaises(NotImplementedError, fbads.account.add, 'some data')
+        with patch('requests.post') as mocked_requests:
+            mocked_requests.return_value.status_code = 201
+            mocked_requests.return_value.content = ''
 
-    # def test_delete_campaign(self):
-    #     fbads = FBAds(account_id=123456789)
-    #     self.assertRaises(NotImplementedError, fbads.account.delete, 123456789)
+            fbads = FBAds(account_id=123456789)
+            fbads.campaign.add(
+                name=u'Test campaign',
+                campaign_status=CampaignStatus.ACTIVE,
+                daily_budget=Decimal('1.50'),
+                lifetime_budget=Decimal('5.00'),
+                start_time=datetime(2013, 6, 1, 0, 0, 0),
+                end_time=datetime(2014, 6, 1, 0, 0, 0),
+            )
+
+    def test_delete_campaign(self):
+        with patch('requests.delete') as mocked_requests:
+            mocked_requests.return_value.status_code = 204
+            mocked_requests.return_value.content = ''
+
+            fbads = FBAds(account_id=123456789)
+            fbads.campaign.delete(121211)
+            # no exceptions... ok!?

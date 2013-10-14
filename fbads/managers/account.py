@@ -10,8 +10,8 @@ class AccountManager(Manager):
     def list(self, *args, **kwargs):
         raise NotImplementedError()
 
-    def get(self, account_id, fields=['id', 'name', 'status']):
-        return super(AccountManager, self).get(object_id=account_id, fields=fields)
+    def get(self, object_id, fields=['id', 'name', 'status']):
+        return super(AccountManager, self).get(object_id=object_id, fields=fields)
 
     def add(self, *args, **kwargs):
         raise NotImplementedError()

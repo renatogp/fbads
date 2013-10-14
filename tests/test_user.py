@@ -46,5 +46,5 @@ class FBAdsUserTestCase(unittest.TestCase):
             mocked_requests.return_value.content = ''
 
             fbads = FBAds(account_id=123456789)
-            fbads.user.delete('121211')
+            fbads.user.delete(121211)
             # no exceptions... ok!?
