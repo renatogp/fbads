@@ -8,10 +8,6 @@ from tests import BaseTestCase
 
 
 class FBAdsCampaignTestCase(BaseTestCase):
-    # def test_list_campaigns(self):
-    #     fbads = FBAds(account_id=123456789)
-    #     self.assertRaises(NotImplementedError, fbads.account.list)
-
     def test_get_campaign(self):
         with patch('requests.get') as mocked_requests:
             mocked_requests.return_value.status_code = 200

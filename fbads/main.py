@@ -2,6 +2,7 @@
 from fbads.client import Client
 from fbads.managers.account import AccountManager
 from fbads.managers.campaign import CampaignManager
+from fbads.managers.group import GroupManager
 from fbads.managers.user import UserManager
 
 
@@ -18,6 +19,10 @@ class FBAds(object):
     @property
     def campaign(self):
         return CampaignManager(self)
+
+    @property
+    def group(self):
+        return GroupManager(self)
 
     @property
     def user(self):
