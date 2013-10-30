@@ -1,5 +1,5 @@
 # coding: utf-8
-
+import urllib
 GRAPH_API_URL = 'https://graph.facebook.com/'
 
 
@@ -22,6 +22,17 @@ class Manager(object):
     def _delete_api_path(self, object_id):
         # usually get and delete URLs are the same
         return self._get_api_path(object_id)
+
+    def _get_full_url(self, path, args):
+        encoded_args = urllib.urlencode(args)
+
+        url = '{0}{1}?{2}'.format(
+            GRAPH_API_URL,
+            path,
+            encoded_args,
+        )
+
+        return url
 
     def list(self, fields=[]):
         url = '{0}{1}?access_token={2}'.format(
@@ -51,10 +62,10 @@ class Manager(object):
         return self._dict_to_resource(response)
 
     def add(self, payload, url=None):
-        url = '{0}{1}?access_token={2}'.format(
-            GRAPH_API_URL,
-            self._add_api_path(),
-            self._api.access_token,
+        url = self._get_full_url(
+            self._add_api_path(), {
+                'access_token': self._api.access_token,
+            }
         )
 
         return self._api.client.post(url, payload)
