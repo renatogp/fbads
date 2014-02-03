@@ -5,7 +5,7 @@ from fbads.resources.campaign import CampaignResource
 
 class CampaignManager(Manager):
     resource_class = CampaignResource
-    resource_name = 'adcampaign'
+    resource_name = 'adcampaigns'
 
     def _get_api_path(self, object_id):
         return '{0}'.format(object_id)
