@@ -16,19 +16,19 @@ class Client(object):
         if response.status_code == 200:
             return json.loads(response.content)
 
-        raise Exception('HTTP ERROR {0}'.format(response.status_code))
+        raise Exception('HTTP ERROR {0}: {1}'.format(response.status_code, response.content))
 
     def post(self, url, payload):
-        payload = json.dumps(payload)
+        # payload = json.dumps(payload)
 
         response = requests.post(url, payload)
 
         logger.info(u'POST {0}, {1}'.format(url, payload))
 
-        if response.status_code == 201:
+        if response.status_code in (200, 201):  # it shouldn't return 200 but...
             return json.loads(response.content) if response.content else None
 
-        raise Exception('HTTP ERROR {0}'.format(response.status_code))
+        raise Exception('HTTP ERROR {0}: {1}'.format(response.status_code, response.content))
 
     def put(self, url):
         return NotImplementedError()
@@ -41,4 +41,4 @@ class Client(object):
         if response.status_code in (200, 202, 204):
             return json.loads(response.content) if response.content else None
 
-        raise Exception('HTTP ERROR {0}'.format(response.status_code))
+        raise Exception('HTTP ERROR {0}: {1}'.format(response.status_code, response.content))
