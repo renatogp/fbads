@@ -10,7 +10,9 @@ class GroupManager(Manager):
     def _get_api_path(self, object_id):
         return '{0}'.format(object_id)
 
-    def add(self, name, bid_type, bid_info, campaign_id, creative_id, targeting_specs, tracking_specs=None, conversion_specs=None, view_tags=[], redownload=False):
+    def add(self, name, bid_type, bid_info, campaign_id, creative_id,
+            targeting_specs, tracking_specs=None, conversion_specs=None,
+            view_tags=[], redownload=False):
         assert not redownload  # if redownload is True, must instantiate a resource_class object... later
 
         if bid_type in (BidType.ABSOLUTE_OCPM, BidType.CPA):

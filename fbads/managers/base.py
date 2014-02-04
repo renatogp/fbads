@@ -77,7 +77,9 @@ class Manager(object):
             self._api.access_token,
         )
 
-        return self._api.client.delete(url)
+        self._api.client.delete(url)
+
+        return True
 
     def _dict_to_resource(self, data, resource_class=None):
         """
