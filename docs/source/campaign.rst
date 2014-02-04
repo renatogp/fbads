@@ -19,7 +19,7 @@ Create an ad campaign
    :rtype: A dict containing the ID, example: ``{"id": 123456787654321}``
 
 
-Exemplo: ::
+Example: ::
 
     from decimal import Decimal
     from fbads import FBAds
@@ -53,7 +53,7 @@ Remove an ad campaign
    :rtype: True
 
 
-Exemplo: ::
+Example: ::
 
     api = FBAds(
         account_id='1233',

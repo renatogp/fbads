@@ -23,7 +23,7 @@ Creating a custom audience
    :rtype: A custom audience ID (long)
 
 
-Exemplo: ::
+Example: ::
 
     from fbads import FBAds
 
@@ -55,7 +55,7 @@ Adding users
    :rtype: ``True`` (hopefully!)
 
 
-Exemplo: ::
+Example: ::
 
     from fbads import FBAds
 
@@ -88,7 +88,7 @@ Removing a custom audience
    :rtype: True
 
 
-Exemplo: ::
+Example: ::
 
     api = FBAds(
         account_id='1233',
