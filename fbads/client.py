@@ -23,7 +23,7 @@ class Client(object):
 
         response = requests.post(url, payload)
 
-        logger.info(u'POST {0}, {1}'.format(url, payload))
+        logger.info(u'POST {0}, {1} - Response: {2}'.format(url, payload, response.content))
 
         if response.status_code in (200, 201):  # it shouldn't return 200 but...
             return json.loads(response.content) if response.content else None

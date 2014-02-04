@@ -61,11 +61,12 @@ class Manager(object):
         response = self._api.client.get(url)
         return self._dict_to_resource(response)
 
-    def add(self, payload, url=None):
+    def add(self, payload, api_path=None):
         url = self._get_full_url(
-            self._add_api_path(), {
+            path=api_path or self._add_api_path(),
+            args={
                 'access_token': self._api.access_token,
-            }
+            },
         )
 
         return self._api.client.post(url, payload)

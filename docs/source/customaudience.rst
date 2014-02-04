@@ -42,6 +42,40 @@ Exemplo: ::
 
 ----
 
+Adding users
+^^^^^^^^^^^^
+
+.. py:function:: fbads.customaudience.add_users(customaudience_id, emails=[])
+
+   Currently adding users only  by e-mail
+
+   :param str customaudience_id: Custom audience ID
+   :param str emails: List of emails -- do not hash the email list, it will be done automatically
+
+   :rtype: ``True`` (hopefully!)
+
+
+Exemplo: ::
+
+    from fbads import FBAds
+
+    api = FBAds(
+        account_id='1233',
+        access_token='token_with_ads_permission',
+    )
+
+    api.customaudience.add_users(
+        '12345678987654321',
+        emails=[
+            'example-01@email.com',
+            'example-02@email.com',
+            'example-03@email.com',
+        ],
+    )
+
+
+----
+
 
 Removing a custom audience
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

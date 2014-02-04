@@ -21,6 +21,57 @@ class FBAdsCustomAudienceTestCase(BaseTestCase):
 
         self.assertTrue(customaudience_id)
 
+    def test_add_users_to_custom_audience_facebook_ids(self):
+        with patch('requests.post') as mocked_requests:
+            mocked_requests.return_value.status_code = 200
+            mocked_requests.return_value.content = 'true'
+
+            fbads = FBAds(account_id=123456789)
+            fbads.customaudience.add_users(
+                customaudience_id='34875623498576394',
+                facebook_ids=[
+                    '12345678987654321',
+                    '12345678987654322',
+                    '12345678987654323',
+                ]
+            )
+
+    def test_add_users_to_custom_audience_emails(self):
+        with patch('requests.post') as mocked_requests:
+            mocked_requests.return_value.status_code = 200
+            mocked_requests.return_value.content = 'true'
+
+            fbads = FBAds(account_id=123456789)
+            fbads.customaudience.add_users(
+                customaudience_id='34875623498576394',
+                emails=[
+                    'email1@email.com',
+                    'email2@email.com',
+                ]
+            )
+
+    def test_add_users_to_custom_audience_assertion_error(self):
+        with patch('requests.post') as mocked_requests:
+            mocked_requests.return_value.status_code = 200
+            mocked_requests.return_value.content = 'true'
+
+            fbads = FBAds(account_id=123456789)
+
+            self.assertRaises(
+                AssertionError,
+                fbads.customaudience.add_users,
+                customaudience_id='34875623498576394',
+                emails=[
+                    'email1@email.com',
+                    'email2@email.com',
+                ],
+                facebook_ids=[
+                    '12345678987654321',
+                    '12345678987654322',
+                    '12345678987654323',
+                ]
+            )
+
     def test_delete_campaign(self):
         with patch('requests.delete') as mocked_requests:
             mocked_requests.return_value.status_code = 204
