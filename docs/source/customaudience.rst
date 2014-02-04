@@ -23,7 +23,7 @@ Creating a custom audience
    :rtype: A custom audience ID (long)
 
 
-Example: ::
+Exemplo: ::
 
     from fbads import FBAds
 
@@ -45,17 +45,18 @@ Example: ::
 Adding users
 ^^^^^^^^^^^^
 
-.. py:function:: fbads.customaudience.add_users(customaudience_id, emails=[])
+.. py:function:: fbads.customaudience.add_users(customaudience_id, facebook_ids=[], emails=[])
 
    Currently adding users only  by e-mail
 
    :param str customaudience_id: Custom audience ID
+   :param str facebook_ids: List of Facebook IDs
    :param str emails: List of emails -- do not hash the email list, it will be done automatically
 
    :rtype: ``True`` (hopefully!)
 
 
-Example: ::
+Exemplo: ::
 
     from fbads import FBAds
 
@@ -70,6 +71,18 @@ Example: ::
             'example-01@email.com',
             'example-02@email.com',
             'example-03@email.com',
+            # ...
+        ],
+    )
+
+    # you cannot use emails and facebook_ids at the same time, so
+    api.customaudience.add_users(
+        '12345678987654321',
+        facebook_ids=[
+            '12345678987001',
+            '12345678987002',
+            '12345678987003',
+            # ...
         ],
     )
 
@@ -88,7 +101,7 @@ Removing a custom audience
    :rtype: True
 
 
-Example: ::
+Exemplo: ::
 
     api = FBAds(
         account_id='1233',
