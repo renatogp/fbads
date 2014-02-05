@@ -71,11 +71,12 @@ class Manager(object):
 
         return self._api.client.post(url, payload)
 
-    def delete(self, object_id):
-        url = '{0}{1}?access_token={2}'.format(
-            GRAPH_API_URL,
-            self._delete_api_path(object_id),
-            self._api.access_token,
+    def delete(self, object_id, api_path=None):
+        url = self._get_full_url(
+            path=api_path or self._delete_api_path(object_id),
+            args={
+                'access_token': self._api.access_token,
+            },
         )
 
         self._api.client.delete(url)
