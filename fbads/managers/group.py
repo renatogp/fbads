@@ -1,4 +1,5 @@
 # coding: utf-8
+import json
 from fbads.managers.base import Manager
 from fbads.resources.group import GroupResource, BidType
 
@@ -22,15 +23,15 @@ class GroupManager(Manager):
             'name': name,
             'bid_type': bid_type,
             'campaign_id': campaign_id,
-            'creative': {
+            'creative': json.dumps({
                 'creative_id': creative_id,
-            },
-            'targeting_specs': targeting_specs.get(),
+            }),
+            'targeting_specs': json.dumps(targeting_specs.get()),
         }
 
         if tracking_specs:
             payload.update({
-                'tracking_specs': tracking_specs.get(),
+                'tracking_specs': json.dumps(tracking_specs.get()),
             })
 
         if conversion_specs:
