@@ -35,7 +35,7 @@ class FBAdsCampaignTestCase(BaseTestCase):
 
         with patch('requests.post') as mocked_requests:
             mocked_requests.return_value.status_code = 201
-            mocked_requests.return_value.content = ''
+            mocked_requests.return_value.content = '{"id": 12345678987654321}'
 
             fbads = FBAds(account_id=123456789)
             fbads.campaign.add(

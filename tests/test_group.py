@@ -18,7 +18,6 @@ class FBAdsGroupTestCase(BaseTestCase):
             fbads = FBAds(account_id=123456789)
 
             targeting_specs = TargetingSpecs()
-            targeting_specs.countries = ['BR']
             targeting_specs.add_custom_audience(id=5424653456345, name='ml_id_290009')
 
             fbads.group.add(
