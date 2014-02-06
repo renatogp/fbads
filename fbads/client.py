@@ -11,7 +11,7 @@ class Client(object):
     def get(self, url):
         response = requests.get(url)
 
-        logger.info(u'GET {0}'.format(url))
+        logger.info(u'GET {0} - Response HTTP {1}: {2}'.format(url, response.status_code, response.content))
 
         if response.status_code == 200:
             return json.loads(response.content)
@@ -36,7 +36,7 @@ class Client(object):
     def delete(self, url):
         response = requests.delete(url)
 
-        logger.info(u'DELETE {0}'.format(url))
+        logger.info(u'DELETE {0} - Response HTTP {1}: {2}'.format(url, response.status_code, response.content))
 
         if response.status_code in (200, 202, 204):
             return json.loads(response.content) if response.content else None
