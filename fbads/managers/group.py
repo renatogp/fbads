@@ -26,17 +26,17 @@ class GroupManager(Manager):
             'creative': json.dumps({
                 'creative_id': creative_id,
             }),
-            'targeting_specs': json.dumps(targeting_specs.get()),
+            'targeting': json.dumps(targeting_specs.get()),
         }
 
         if tracking_specs:
             payload.update({
-                'tracking_specs': json.dumps(tracking_specs.get()),
+                'tracking': json.dumps(tracking_specs.get()),
             })
 
         if conversion_specs:
             payload.update({
-                'conversion_specs': conversion_specs,
+                'conversion': conversion_specs,
             })
 
         if view_tags:
