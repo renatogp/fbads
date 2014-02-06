@@ -5,7 +5,7 @@ from fbads.resources.group import GroupResource, BidType
 
 class GroupManager(Manager):
     resource_class = GroupResource
-    resource_name = 'adgroup'
+    resource_name = 'adgroups'
 
     def _get_api_path(self, object_id):
         return '{0}'.format(object_id)
