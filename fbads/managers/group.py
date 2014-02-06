@@ -22,6 +22,7 @@ class GroupManager(Manager):
         payload = {
             'name': name,
             'bid_type': bid_type,
+            'bid_info': json.dumps(bid_info),
             'campaign_id': campaign_id,
             'creative': json.dumps({
                 'creative_id': creative_id,
