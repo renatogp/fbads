@@ -33,10 +33,10 @@ class Client(object):
     def put(self, url):
         return NotImplementedError()
 
-    def delete(self, url):
-        response = requests.delete(url)
+    def delete(self, url, payload=None):
+        response = requests.delete(url, payload)
 
-        logger.info(u'DELETE {0} - Response HTTP {1}: {2}'.format(url, response.status_code, response.content))
+        logger.info(u'DELETE {0}, {1} - Response HTTP {2}: {3}'.format(url, payload, response.status_code, response.content))
 
         if response.status_code in (200, 202, 204):
             return json.loads(response.content) if response.content else None

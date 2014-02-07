@@ -71,7 +71,7 @@ class Manager(object):
 
         return self._api.client.post(url, payload)
 
-    def delete(self, object_id, api_path=None):
+    def delete(self, object_id, payload=None, api_path=None):
         url = self._get_full_url(
             path=api_path or self._delete_api_path(object_id),
             args={
@@ -79,7 +79,7 @@ class Manager(object):
             },
         )
 
-        self._api.client.delete(url)
+        self._api.client.delete(url, payload)
 
         return True
 
