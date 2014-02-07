@@ -72,14 +72,21 @@ class Manager(object):
         return self._api.client.post(url, payload)
 
     def delete(self, object_id, payload=None, api_path=None):
+        args = {
+            'access_token': self._api.access_token,
+        }
+
+        # there's no payload for DELETE requests, converting
+        # to url params
+        if payload:
+            args.update(payload)
+
         url = self._get_full_url(
             path=api_path or self._delete_api_path(object_id),
-            args={
-                'access_token': self._api.access_token,
-            },
+            args=args,
         )
 
-        self._api.client.delete(url, payload)
+        self._api.client.delete(url)
 
         return True
 
