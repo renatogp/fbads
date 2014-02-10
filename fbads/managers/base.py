@@ -20,7 +20,11 @@ class Manager(object):
         return 'act_{0}/{1}/{2}'.format(self._api.account_id, self.resource_name, object_id)
 
     def _delete_api_path(self, object_id):
-        # usually get and delete URLs are the same
+        # usually get, update and delete URLs are the same
+        return self._get_api_path(object_id)
+
+    def _update_api_path(self, object_id):
+        # usually get, update and delete URLs are the same
         return self._get_api_path(object_id)
 
     def _get_full_url(self, path, args):
@@ -60,6 +64,15 @@ class Manager(object):
 
         response = self._api.client.get(url)
         return self._dict_to_resource(response)
+
+    def update(self, object_id, payload):
+        url = '{0}{1}?access_token={2}'.format(
+            GRAPH_API_URL,
+            self._update_api_path(object_id),
+            self._api.access_token,
+        )
+
+        return self._api.client.post(url, payload)
 
     def add(self, payload, api_path=None):
         url = self._get_full_url(
