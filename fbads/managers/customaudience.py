@@ -9,6 +9,9 @@ class CustomAudienceManager(Manager):
     resource_class = CustomAudienceResource
     resource_name = 'customaudiences'
 
+    def _get_api_path(self, object_id):
+        return '{0}'.format(object_id)
+
     def _delete_api_path(self, object_id):
         return '{0}'.format(object_id)
 
