@@ -38,7 +38,7 @@ class Manager(object):
 
         return url
 
-    def list(self, fields=[]):
+    def list(self, fields=[], limit=None):
         url = '{0}{1}?access_token={2}'.format(
             GRAPH_API_URL,
             self._list_api_path(),
@@ -47,6 +47,9 @@ class Manager(object):
 
         if fields:
             url += '&fields={0}'.format(','.join(fields))
+
+        if limit:
+            url += '&limit={0}'.format(limit)
 
         response = self._api.client.get(url)
 
