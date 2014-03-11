@@ -1,6 +1,4 @@
 # coding: utf-8
-import json
-from mock import patch
 from fbads import FBAds
 from tests import BaseTestCase
 
@@ -11,17 +9,11 @@ class FBAdsAccountTestCase(BaseTestCase):
         self.assertRaises(NotImplementedError, fbads.account.list)
 
     def test_get_account(self):
-        with patch('requests.get') as mocked_requests:
-            mocked_requests.return_value.status_code = 200
-            mocked_requests.return_value.content = json.dumps({
-                'id': 123456789,
-                'name': 'Account name',
-            })
-
-            fbads = FBAds(account_id=123456789)
-            account = fbads.account.get(123456789, fields=['id', 'name'])
-            self.assertEqual(account.id, 123456789)
-            self.assertEqual(account.name, 'Account name')
+        with self.replay():
+            fbads = FBAds(account_id='1374333772780983', access_token='a_valid_token')
+            account = fbads.account.get('1374333772780983', fields=['id', 'name'])
+            self.assertEqual(account.id, 'act_1374333772780983')
+            self.assertEqual(account.account_id, '1374333772780983')
 
     def test_add_account(self):
         fbads = FBAds(account_id=123456789)

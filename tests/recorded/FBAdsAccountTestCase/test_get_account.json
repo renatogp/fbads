@@ -1,0 +1,37 @@
+[
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Host": "graph.facebook.com", 
+                "User-Agent": "python-requests/2.2.1 CPython/2.7.5 Darwin/13.0.0"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
+            "url": "/act_1374333772780983?fields=id%2Cname"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"id\":\"act_1374333772780983\",\"name\":\"\",\"account_id\":\"1374333772780983\"}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "71", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Tue, 11 Mar 2014 14:08:41 GMT", 
+                "etag": "\"7ba0c5fed5fed9be3a4552e4b59e067ced0d1bd5\"", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "+xdaOCmZb9MgDbBj/c3Bet7dYrfegaVLoe47uMInn7o=", 
+                "x-fb-rev": "1155687"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": ""
+            }
+        }
+    }
+]
