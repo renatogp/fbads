@@ -38,6 +38,30 @@ Example: ::
 
     print u'Campaign created with ID {0}'.format(campaign_id)
 
+----
+
+
+List campaigns
+^^^^^^^^^^^^^^
+
+.. py:function:: fbads.campaign.list([limit])
+
+   List all account campaigns.
+
+   :param int limit: An optional limit
+   :rtype: list of CampaignResource
+
+
+Example: ::
+
+    api = FBAds(
+        account_id='1233',
+        access_token='token_with_ads_permission',
+    )
+
+    for campaign in api.campaign.list(fields=['name'], limit=10):
+        print campaign.name
+
 
 ----
 

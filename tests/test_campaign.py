@@ -32,6 +32,16 @@ class FBAdsCampaignTestCase(BaseTestCase):
 
             self.assertEqual(campaign_id, '6015348798482')
 
+    def test_list_campaigns(self):
+        with self.replay():
+            fbads = FBAds(account_id='1378857852381224', access_token='a_valid_token')
+            campaigns = fbads.campaign.list(fields=['name'], limit=10)
+            self.assertEqual(len(campaigns), 1)
+
+            campaign = campaigns.pop()
+            self.assertEqual(campaign.name, u'Test campaign')
+            self.assertEqual(campaign.id, '6015348517682')
+
     def test_delete_campaign(self):
         with self.replay():
             fbads = FBAds(account_id='1378857852381224', access_token='a_valid_token')
