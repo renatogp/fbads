@@ -1,0 +1,38 @@
+[
+    {
+        "request": {
+            "body": "lifetime_budget=50000&name=Test+campaign&start_time=2013-06-01T00%3A00%3A00&campaign_status=1&redownload=False&end_time=2014-12-01T00%3A00%3A00", 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "143", 
+                "Content-Type": "application/x-www-form-urlencoded", 
+                "Host": "graph.facebook.com", 
+                "User-Agent": "python-requests/2.2.1 CPython/2.7.5 Darwin/13.0.0"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "POST", 
+            "port": 443, 
+            "url": "/act_1378857852381224/adcampaigns"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"id\":\"6015348798482\"}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "22", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Tue, 11 Mar 2014 14:45:18 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "0++5QVJW3HKuRMIaxP0EuZNyWtzLQdvh0xvzHc6XgJQ=", 
+                "x-fb-rev": "1155687"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": ""
+            }
+        }
+    }
+]

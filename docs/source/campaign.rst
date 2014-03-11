@@ -30,13 +30,13 @@ Example: ::
         access_token='token_with_ads_permission',
     )
 
-    campaign = api.campaign.add(
+    campaign_id = api.campaign.add(
         name=u'Testing campaign #001',
         campaign_status=CampaignStatus.ACTIVE,
         daily_budget=Decimal('1.00'),
     )
 
-    print u'Campaign created with ID {0}'.format(campaign['id'])
+    print u'Campaign created with ID {0}'.format(campaign_id)
 
 
 ----

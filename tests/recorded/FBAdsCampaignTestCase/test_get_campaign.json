@@ -1,0 +1,37 @@
+[
+    {
+        "request": {
+            "body": null,
+            "headers": {
+                "Accept": "*/*",
+                "Accept-Encoding": "gzip, deflate, compress",
+                "Host": "graph.facebook.com",
+                "User-Agent": "python-requests/2.2.1 CPython/2.7.5 Darwin/13.0.0"
+            },
+            "host": "graph.facebook.com",
+            "method": "GET",
+            "port": 443,
+            "url": "/6015348517682?fields=name%2Cstart_time%2Cend_time%2Cdaily_budget%2Clifetime_budget"
+        },
+        "response": {
+            "body_quoted_printable": "{\"name\":\"Test campaign\",\"start_time\":\"2014-03-11T07:31:05-0700\",\"end_time\":=\n\"2014-12-01T00:00:00-0800\",\"lifetime_budget\":50000,\"id\":\"6015348517682\"}",
+            "headers": {
+                "access-control-allow-origin": "*",
+                "cache-control": "private, no-cache, no-store, must-revalidate",
+                "connection": "keep-alive",
+                "content-length": "147",
+                "content-type": "application/json; charset=UTF-8",
+                "date": "Tue, 11 Mar 2014 14:35:00 GMT",
+                "etag": "\"ba612e04d18b1fd530d29bc6ca04295a3b9a0dd1\"",
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+                "pragma": "no-cache",
+                "x-fb-debug": "1mh7Gnu++xc4nidPLu0Np61OixM4TMx7hudjW19v/HE=",
+                "x-fb-rev": "1155687"
+            },
+            "status": {
+                "code": 200,
+                "message": ""
+            }
+        }
+    }
+]

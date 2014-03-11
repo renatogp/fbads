@@ -46,4 +46,4 @@ class CampaignManager(Manager):
 
         return super(CampaignManager, self).add(
             payload=payload
-        )
+        )['id']
