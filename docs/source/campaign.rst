@@ -60,4 +60,4 @@ Example: ::
         access_token='token_with_ads_permission',
     )
 
-    api.campaign.delete(123456787654321)
+    print api.campaign.delete(123456787654321)  # returns True
