@@ -2,7 +2,7 @@
 import logging
 import os
 import unittest
-from httreplay import replay as with_replay, filter_query_params_key
+from httreplay import replay as with_replay, filter_query_params_key, filter_headers_key
 
 
 class BaseTestCase(unittest.TestCase):
@@ -21,7 +21,13 @@ class BaseTestCase(unittest.TestCase):
                 os.path.dirname(__file__),
                 'recorded',
                 self.__class__.__name__,
-                "{0}.json".format(self._test_name_for_replay_file())))
+                "{0}.json".format(self._test_name_for_replay_file())
+            )
+        )
 
     def replay(self):
-        return with_replay(self._replay_file_name(), url_key=filter_query_params_key(['access_token']))
+        return with_replay(
+            self._replay_file_name(),
+            url_key=filter_query_params_key(['access_token']),
+            headers_key=filter_headers_key(['User-Agent']),
+        )

@@ -5,8 +5,7 @@
             "headers": {
                 "Accept": "*/*",
                 "Accept-Encoding": "gzip, deflate, compress",
-                "Host": "graph.facebook.com",
-                "User-Agent": "python-requests/2.2.1 CPython/2.7.5 Darwin/13.0.0"
+                "Host": "graph.facebook.com"
             },
             "host": "graph.facebook.com",
             "method": "GET",
