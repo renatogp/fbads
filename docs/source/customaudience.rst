@@ -47,7 +47,7 @@ Adding users
 
 .. py:function:: fbads.customaudience.add_users(customaudience_id, facebook_ids=[], emails=[])
 
-   Currently adding users only  by e-mail
+   You can add users using facebook_ids or e-mails. ``fbads`` will hash the e-mail list using md5.
 
    :param str customaudience_id: Custom audience ID
    :param str facebook_ids: List of Facebook IDs
@@ -66,7 +66,7 @@ Exemplo: ::
     )
 
     api.customaudience.add_users(
-        '12345678987654321',
+        customaudience_id='12345678987654321',
         emails=[
             'example-01@email.com',
             'example-02@email.com',
@@ -77,7 +77,7 @@ Exemplo: ::
 
     # you cannot use emails and facebook_ids at the same time, so
     api.customaudience.add_users(
-        '12345678987654321',
+        customaudience_id='12345678987654321',
         facebook_ids=[
             '12345678987001',
             '12345678987002',
@@ -95,7 +95,7 @@ Removing a custom audience
 
 .. py:function:: fbads.customaudience.delete(customaudience_id)
 
-   Remove custom audience from the ad account
+   Removes a custom audience from the ad account
 
    :param str customaudience_id: Custom audience ID
    :rtype: True

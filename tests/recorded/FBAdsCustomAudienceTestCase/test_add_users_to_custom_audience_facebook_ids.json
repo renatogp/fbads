@@ -1,0 +1,37 @@
+[
+    {
+        "request": {
+            "body": "users=%5B%7B%22id%22%3A+%2212345678987654321%22%7D%2C+%7B%22id%22%3A+%2212345678987654322%22%7D%2C+%7B%22id%22%3A+%2212345678987654323%22%7D%5D&hash_type=md5", 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "157", 
+                "Content-Type": "application/x-www-form-urlencoded", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "POST", 
+            "port": 443, 
+            "url": "/6015403089082/users"
+        }, 
+        "response": {
+            "body_quoted_printable": "true", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "4", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Wed, 12 Mar 2014 19:45:53 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "6a+kg9z3H2sNEU4aLawYoPPZTIApIvqvTQy+QhH4e1E=", 
+                "x-fb-rev": "1158544"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": "OK"
+            }
+        }
+    }
+]
