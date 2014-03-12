@@ -21,6 +21,7 @@ Documentation:
 
    installation
    campaign
+   creative
    customaudience
 
 

@@ -1,0 +1,36 @@
+[
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
+            "url": "/act_1378857852381224/adcreatives?fields=title&limit=10"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"data\":[{\"title\":\"Luizalabs.com\",\"id\":\"6014479876682\"}],\"paging\":{\"cursors=\n\":{\"after\":\"NjAxNDQ3OTg3NjY4Mg=3D=3D\",\"before\":\"NjAxNDQ3OTg3NjY4Mg=3D=3D\"}}=\n,\"count\":1,\"limit\":10}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "164", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Wed, 12 Mar 2014 20:23:15 GMT", 
+                "etag": "\"e9d3a6bb211929a1badfab22d14a3d3dd26948f0\"", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "Ee03vD4ePkTRJNZIwAO+TZshH01D7jVCv65UPUFYDZo=", 
+                "x-fb-rev": "1158544"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": "OK"
+            }
+        }
+    }
+]

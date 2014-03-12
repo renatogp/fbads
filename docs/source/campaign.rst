@@ -16,7 +16,7 @@ Create an ad campaign
    :param datetime start_time: The campaign start date
    :param datetime end_time: The campaign End date
 
-   :rtype: A dict containing the ID, example: ``{"id": 123456787654321}``
+   :rtype: An ad campaign ID (str)
 
 
 Example: ::
