@@ -13,7 +13,7 @@ Installation
 
 Install via ``pip``: ::
 
-    $ pip install boto
+    $ pip install fbads
 
 
 Usage
