@@ -10,3 +10,6 @@ doc:
 
 readthedocs:
 	curl -v -X POST http://readthedocs.org/build/fbads
+
+sdist:
+	`which python` setup.py sdist upload
