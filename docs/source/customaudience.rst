@@ -14,7 +14,7 @@ Creating a custom audience
 
 .. py:function:: fbads.customaudience.add(name, description=None, opt_out_link=None)
 
-   Add a new campaign to the ad account
+   Add a new custom audience to the ad account
 
    :param str name: Custom audience name
    :param str description: Custom audience description
