@@ -1,0 +1,36 @@
+[
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "0", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "DELETE", 
+            "port": 443, 
+            "url": "/6015415795282"
+        }, 
+        "response": {
+            "body_quoted_printable": "true", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "4", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 13 Mar 2014 12:21:43 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "w/uiRs1kflMtKJT2MpW1yMbACKGFSzd0e2UFtpGIyko=", 
+                "x-fb-rev": "1159257"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": ""
+            }
+        }
+    }
+]

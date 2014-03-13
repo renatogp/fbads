@@ -1,0 +1,36 @@
+[
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
+            "url": "/act_1378857852381224/adgroups?fields=name%2Cbid_info&limit=10"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"data\":[{\"name\":\"Ad group name\",\"bid_info\":{\"CLICKS\":25},\"id\":\"60154158874=\n82\"}],\"paging\":{\"cursors\":{\"after\":\"NjAxNTQxNTg4NzQ4Mg=3D=3D\",\"before\":\"NjA=\nxNTQxNTg4NzQ4Mg=3D=3D\"}},\"count\":1,\"limit\":10,\"offset\":0}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "199", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 13 Mar 2014 12:25:59 GMT", 
+                "etag": "\"40b6de4b1b065561889fe810fa5f027466afac64\"", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "oP8FUTlN83Mas+oisD6B182rKIuE/oCDoFLWuVGRXuQ=", 
+                "x-fb-rev": "1159257"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": ""
+            }
+        }
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "request": {
+            "body": "targeting=%7B%22custom_audiences%22%3A+%5B%7B%22id%22%3A+%226014532845282%22%2C+%22name%22%3A+%22205084400_abandoned_cart%22%7D%5D%2C+%22countries%22%3A+%5B%5D%7D&name=Ad+group+name&bid_info=%7B%22CLICKS%22%3A+25%7D&campaign_id=6015348517682&creative=%7B%22creative_id%22%3A+%226014479876682%22%7D&bid_type=CPC", 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "310", 
+                "Content-Type": "application/x-www-form-urlencoded", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "POST", 
+            "port": 443, 
+            "url": "/act_1378857852381224/adgroups"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"id\":\"6015415795282\"}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "22", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 13 Mar 2014 12:19:22 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "IIjtes/ZpkMv5iaQsu6mLrcuROgiaP9be3UYrH94KL8=", 
+                "x-fb-rev": "1159257"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": ""
+            }
+        }
+    }
+]

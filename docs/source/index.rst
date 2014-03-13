@@ -22,6 +22,7 @@ Documentation:
    installation
    campaign
    creative
+   group
    customaudience
 
 

@@ -47,4 +47,4 @@ class GroupManager(Manager):
 
         return super(GroupManager, self).add(
             payload=payload
-        )
+        )['id']
