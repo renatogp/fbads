@@ -8,14 +8,16 @@ from tests import BaseTestCase
 
 
 class FBAdsGroupTestCase(BaseTestCase):
+
     def test_add_group(self):
         from fbads.resources.group import BidInfo, BidType, TargetingSpecs
 
         with self.replay():
-            fbads = FBAds(account_id='1378857852381224', access_token='a_valid_token')
+            fbads = FBAds(account_id='1374333772780983', access_token='a_valid_token')
 
             targeting_specs = TargetingSpecs()
-            targeting_specs.add_custom_audience('6014532845282', '205084400_abandoned_cart')
+            targeting_specs.countries = ['BR']
+            targeting_specs.add_custom_audience('6015049355607', '0887290_ws_viewed')
 
             group_id = fbads.group.add(
                 name=u'Ad group name',
@@ -24,11 +26,11 @@ class FBAdsGroupTestCase(BaseTestCase):
                     BidType.CPC,
                     clicks=Decimal('0.25'),
                 ),
-                campaign_id='6015348517682',
-                creative_id='6014479876682',
+                campaign_id='6014407160007',
+                creative_id='6015049549407',
                 targeting_specs=targeting_specs,
             )
-            self.assertEqual(group_id, '6015415795282')
+            self.assertEqual(group_id, '6015051549007')
 
     def test_list_groups(self):
         with self.replay():
@@ -39,7 +41,7 @@ class FBAdsGroupTestCase(BaseTestCase):
             group = groups.pop()
             self.assertEqual(group.name, u'Ad group name')
 
-            #TODO: should we convert this back to Decimal('0.25')?
+            # TODO: should we convert this back to Decimal('0.25')?
             self.assertEqual(group.bid_info['CLICKS'], 25)
 
     def test_delete_group(self):

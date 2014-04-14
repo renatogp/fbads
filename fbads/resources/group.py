@@ -25,6 +25,7 @@ class BidType(object):
 
 
 class BidInfo(object):
+
     @classmethod
     def get(cls, bid_type, impressions=None, clicks=None, actions=None, reach=None, social=None):
         info = {}
@@ -82,10 +83,12 @@ class TargetingSpecs(object):
 
     def get(self):
         spec = {
-            'countries': self.countries,
+            'geo_locations': {
+                'countries': self.countries,
+            }
         }
 
-        for attr in ('custom_audiences', 'excluded_custom_audiences', 'countries', 'age_min', 'age_max', 'genders'):
+        for attr in ('custom_audiences', 'excluded_custom_audiences', 'age_min', 'age_max', 'genders'):
             val = getattr(self, attr)
             if val:
                 spec.update({attr: val})
