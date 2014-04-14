@@ -5,15 +5,15 @@ Ad creatives
 Create an ad creative
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. py:function:: fbads.creative.add(title, body, link_url, image_url, related_fan_page=None)
+.. py:function:: fbads.creative.add(title, body, object_url, image_url, actor_id=None)
 
    Add a new creative to the ad account
 
    :param str name: Creative title
    :param str body: Body (ad text)
-   :param str link_url: Target URL
+   :param str object_url: Target URL
    :param str image_url: Ad image URL
-   :param str related_fan_page: An optional Facebook Page ID
+   :param str actor_id: An optional Facebook Object ID (eg.: a page)
 
 
    :rtype: An ad creative ID (str)
@@ -31,7 +31,7 @@ Example: ::
     creative_id = fbads.creative.add(
         title=u'Test creative',
         body=u'Testing creative creation! Lorem ipsum here.',
-        link_url='http://fbads.readthedocs.org/en/latest/index.html',
+        object_url='http://fbads.readthedocs.org/en/latest/index.html',
         image_url='https://d1dhh18vvfes41.cloudfront.net/417x300/051057500.jpg',
     )
 
