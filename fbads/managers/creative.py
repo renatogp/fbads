@@ -10,19 +10,26 @@ class CreativeManager(Manager):
     def _get_api_path(self, object_id):
         return '{0}'.format(object_id)
 
-    def add(self, title, body, link_url, image_url, related_fan_page=None):
+    def add(self, title, body, image_url, object_url=None, link_url=None, actor_id=None, related_fan_page=None):
         assert len(body) <= 90, u'text must be 90 chars or less'
+
+        # making legacy code work with new ads api
+        if link_url and not object_url:
+            object_url = link_url
+
+        if related_fan_page and not actor_id:
+            actor_id = related_fan_page
 
         payload = {
             'title': title,
             'body': body,
-            'link_url': link_url,
+            'object_url': object_url,
             'image_url': image_url,
         }
 
-        if related_fan_page:
+        if actor_id:
             payload.update({
-                'related_fan_page': related_fan_page,
+                'actor_id': actor_id,
             })
 
         content = super(CreativeManager, self).add(

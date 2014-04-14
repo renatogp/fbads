@@ -4,9 +4,10 @@ from tests import BaseTestCase
 
 
 class FBAdsCreativeTestCase(BaseTestCase):
+
     def test_add_creative(self):
         with self.replay():
-            fbads = FBAds(account_id='1378857852381224', access_token='a_valid_token')
+            fbads = FBAds(account_id='1378857852381224', access_token='CAAKt92vX5SoBADj4Wy0Kj3wsqgZBqIqM20rcv7zD1gck7wRLZCzYywSkTKDUe3qlFoTJNoRYoNyuSA4IPDQqYnNkSwfFGxgDmQeL1ZAGMnUytU73YaeFWlOiLKPBV4ZAhUaokZAaqcdsZBZAiGIcbVlTZBwjt16B71qg3mZBAYpRV0h4tLoadw7yMk8tBcBFTNfcZD')
             creative_id = fbads.creative.add(
                 title=u'Test creative',
                 body=u'Testing creative creation! Lorem ipsum here.',
