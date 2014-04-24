@@ -5,27 +5,27 @@
             "headers": {
                 "Accept": "*/*", 
                 "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "0", 
                 "Host": "graph.facebook.com"
             }, 
             "host": "graph.facebook.com", 
-            "method": "GET", 
+            "method": "DELETE", 
             "port": 443, 
-            "url": "/act_1378857852381224/adgroups?fields=name%2Cbid_info&limit=10"
+            "url": "/6016248730082"
         }, 
         "response": {
-            "body_quoted_printable": "{\"data\":[{\"name\":\"Ad group name\",\"bid_info\":{\"CLICKS\":1},\"id\":\"601644362328=\n2\"},{\"name\":\"teste\",\"bid_info\":{\"CLICKS\":1},\"id\":\"6016443193282\"}],\"paging\"=\n:{\"cursors\":{\"before\":\"NjAxNjQ0MzYyMzI4Mg=3D=3D\",\"after\":\"NjAxNjQ0MzE5MzI4M=\ng=3D=3D\"}}}", 
+            "body_quoted_printable": "true", 
             "headers": {
                 "access-control-allow-origin": "*", 
                 "cache-control": "private, no-cache, no-store, must-revalidate", 
                 "connection": "keep-alive", 
-                "content-length": "228", 
+                "content-length": "4", 
                 "content-type": "application/json; charset=UTF-8", 
-                "date": "Thu, 24 Apr 2014 14:21:39 GMT", 
-                "etag": "\"7f03821f09060f1c851358880f28c4e25dfc607f\"", 
+                "date": "Thu, 17 Apr 2014 18:28:19 GMT", 
                 "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
                 "pragma": "no-cache", 
-                "x-fb-debug": "WOmMS8EncNrTun01NLxTDXuupZvRWi7u/1ZyGukAAzc=", 
-                "x-fb-rev": "1220390"
+                "x-fb-debug": "TTJ+SOZ+7qdm92fR8PxhF3TTKu30sJwhLrP8OlQZehw=", 
+                "x-fb-rev": "1210967"
             }, 
             "status": {
                 "code": 200, 

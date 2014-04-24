@@ -6,10 +6,12 @@ from fbads.managers.customaudience import CustomAudienceManager
 from fbads.managers.creative import CreativeManager
 from fbads.managers.fbx import FBXManager
 from fbads.managers.group import GroupManager
+from fbads.managers.set import SetManager
 from fbads.managers.user import UserManager
 
 
 class FBAds(object):
+
     def __init__(self, account_id, access_token=None):
         self.account_id = account_id
         self.access_token = access_token
@@ -42,3 +44,7 @@ class FBAds(object):
     @property
     def user(self):
         return UserManager(self)
+
+    @property
+    def set(self):
+        return SetManager(self)

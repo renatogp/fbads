@@ -11,7 +11,7 @@ class GroupManager(Manager):
     def _get_api_path(self, object_id):
         return '{0}'.format(object_id)
 
-    def add(self, name, bid_type, bid_info, campaign_id, creative_id,
+    def add(self, name, bid_type, bid_info, set_id, creative_id,
             targeting_specs, tracking_specs=None, conversion_specs=None,
             view_tags=[], redownload=False):
         assert not redownload  # if redownload is True, must instantiate a resource_class object... later
@@ -23,7 +23,7 @@ class GroupManager(Manager):
             'name': name,
             'bid_type': bid_type,
             'bid_info': json.dumps(bid_info),
-            'campaign_id': campaign_id,
+            'campaign_id': set_id,
             'creative': json.dumps({
                 'creative_id': creative_id,
             }),

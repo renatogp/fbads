@@ -1,0 +1,109 @@
+[
+    {
+        "request": {
+            "body": "lifetime_budget=50000&name=Test+campaign&start_time=2013-06-01T00%3A00%3A00&campaign_status=ACTIVE&redownload=False&end_time=2014-12-01T00%3A00%3A00", 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "148", 
+                "Content-Type": "application/x-www-form-urlencoded", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "POST", 
+            "port": 443, 
+            "url": "/act_1378857852381224/adcampaigns"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"error\":{\"type\":\"Exception\",\"message\":\"A Campaign Group id must be specifi=\ned when creating a campaign.\",\"code\":1487604}}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "no-store", 
+                "connection": "keep-alive", 
+                "content-length": "121", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 17 Apr 2014 18:11:24 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "www-authenticate": "OAuth \"Facebook Platform\" \"invalid_request\" \"A Campaign Group id must be specified when creating a campaign.\"", 
+                "x-fb-debug": "4s7HNpN38kyIiqR6yunzNrDhsZk2qWuRifcBxaFz93Y=", 
+                "x-fb-rev": "1210967"
+            }, 
+            "status": {
+                "code": 500, 
+                "message": "Internal Server Error"
+            }
+        }
+    }, 
+    {
+        "request": {
+            "body": "lifetime_budget=1000&campaign_group_id=6016248666482&name=Test+campaign&start_time=2014-05-01T00%3A00%3A00&campaign_status=ACTIVE&redownload=False&end_time=2014-05-05T00%3A00%3A00", 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "179", 
+                "Content-Type": "application/x-www-form-urlencoded", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "POST", 
+            "port": 443, 
+            "url": "/act_1378857852381224/adcampaigns"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"error\":{\"type\":\"Exception\",\"message\":\"Campaigns may not be added to delet=\ned Campaign Groups.\",\"code\":1487634}}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "no-store", 
+                "connection": "keep-alive", 
+                "content-length": "112", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 17 Apr 2014 18:21:55 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "www-authenticate": "OAuth \"Facebook Platform\" \"invalid_request\" \"Campaigns may not be added to deleted Campaign Groups.\"", 
+                "x-fb-debug": "WRVDj2QFbT6U62rTYc7Rcsjp/kpdpC6wvtKiQhHGp3o=", 
+                "x-fb-rev": "1210967"
+            }, 
+            "status": {
+                "code": 500, 
+                "message": "Internal Server Error"
+            }
+        }
+    }, 
+    {
+        "request": {
+            "body": "lifetime_budget=1000&campaign_group_id=6016248662482&name=Test+campaign&start_time=2014-05-01T00%3A00%3A00&campaign_status=ACTIVE&redownload=False&end_time=2014-05-05T00%3A00%3A00", 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Content-Length": "179", 
+                "Content-Type": "application/x-www-form-urlencoded", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "POST", 
+            "port": 443, 
+            "url": "/act_1378857852381224/adcampaigns"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"id\":\"6016248730082\"}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "22", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 17 Apr 2014 18:22:14 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "yLeZwsOuEme2ygHc+mf9hrNp+xQYexNcdTWei9Hc9+4=", 
+                "x-fb-rev": "1210967"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": "OK"
+            }
+        }
+    }
+]

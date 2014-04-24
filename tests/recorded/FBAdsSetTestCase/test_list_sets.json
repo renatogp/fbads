@@ -1,0 +1,36 @@
+[
+    {
+        "request": {
+            "body": null,
+            "headers": {
+                "Accept": "*/*",
+                "Accept-Encoding": "gzip, deflate, compress",
+                "Host": "graph.facebook.com"
+            },
+            "host": "graph.facebook.com",
+            "method": "GET",
+            "port": 443,
+            "url": "/act_1378857852381224/adcampaigns?fields=name&limit=10"
+        },
+        "response": {
+            "body_quoted_printable": "{\"data\":[{\"name\":\"Test campaign\",\"id\":\"6016248730082\"}],\"paging\":{\"cursors\"=\n:{\"before\":\"NjAxNjI0ODczMDA4Mg=3D=3D\",\"after\":\"NjAxNjI0ODczMDA4Mg=3D=3D\"}}}",
+            "headers": {
+                "access-control-allow-origin": "*",
+                "cache-control": "private, no-cache, no-store, must-revalidate",
+                "connection": "keep-alive",
+                "content-length": "142",
+                "content-type": "application/json; charset=UTF-8",
+                "date": "Thu, 17 Apr 2014 18:22:56 GMT",
+                "etag": "\"d7a920f4f573525e9b11f60ee87ff100885236f5\"",
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+                "pragma": "no-cache",
+                "x-fb-debug": "BPmLMSaaiwRSFMGebmC43m/JpvVa2DvMq75e/Wxqsng=",
+                "x-fb-rev": "1210967"
+            },
+            "status": {
+                "code": 200,
+                "message": "OK"
+            }
+        }
+    }
+]

@@ -6,6 +6,7 @@ from httreplay import replay as with_replay, filter_query_params_key, filter_hea
 
 
 class BaseTestCase(unittest.TestCase):
+
     def setUp(self):
         logging.basicConfig(filename='test.log', level=logging.DEBUG)
 
@@ -31,3 +32,9 @@ class BaseTestCase(unittest.TestCase):
             url_key=filter_query_params_key(['access_token']),
             headers_key=filter_headers_key(['User-Agent']),
         )
+
+    def get_test_access_token(self):
+        token = os.environ.get('FBADS_TEST_ACCESS_TOKEN')
+        if not token:
+            logging.info(u'FBADS_TEST_ACCESS_TOKEN undefined')
+        return token or 'a_valid_token'

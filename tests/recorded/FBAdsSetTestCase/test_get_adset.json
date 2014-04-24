@@ -10,22 +10,22 @@
             "host": "graph.facebook.com", 
             "method": "GET", 
             "port": 443, 
-            "url": "/act_1378857852381224/adgroups?fields=name%2Cbid_info&limit=10"
+            "url": "/6016248730082?fields=name%2Cstart_time%2Cend_time%2Cdaily_budget%2Clifetime_budget"
         }, 
         "response": {
-            "body_quoted_printable": "{\"data\":[{\"name\":\"Ad group name\",\"bid_info\":{\"CLICKS\":1},\"id\":\"601644362328=\n2\"},{\"name\":\"teste\",\"bid_info\":{\"CLICKS\":1},\"id\":\"6016443193282\"}],\"paging\"=\n:{\"cursors\":{\"before\":\"NjAxNjQ0MzYyMzI4Mg=3D=3D\",\"after\":\"NjAxNjQ0MzE5MzI4M=\ng=3D=3D\"}}}", 
+            "body_quoted_printable": "{\"name\":\"Test campaign\",\"start_time\":\"2014-05-01T00:00:00-0700\",\"end_time\":=\n\"2014-05-05T00:00:00-0700\",\"daily_budget\":0,\"lifetime_budget\":1000,\"id\":\"60=\n16248730082\"}", 
             "headers": {
                 "access-control-allow-origin": "*", 
                 "cache-control": "private, no-cache, no-store, must-revalidate", 
                 "connection": "keep-alive", 
-                "content-length": "228", 
+                "content-length": "163", 
                 "content-type": "application/json; charset=UTF-8", 
-                "date": "Thu, 24 Apr 2014 14:21:39 GMT", 
-                "etag": "\"7f03821f09060f1c851358880f28c4e25dfc607f\"", 
+                "date": "Thu, 17 Apr 2014 18:23:44 GMT", 
+                "etag": "\"489e9a357bf191e1c3579aa98deb51359ae91a39\"", 
                 "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
                 "pragma": "no-cache", 
-                "x-fb-debug": "WOmMS8EncNrTun01NLxTDXuupZvRWi7u/1ZyGukAAzc=", 
-                "x-fb-rev": "1220390"
+                "x-fb-debug": "ATUHChypyZKuXWuYLs+evIdRXk70C1VYUGRc0/DJEww=", 
+                "x-fb-rev": "1210967"
             }, 
             "status": {
                 "code": 200, 

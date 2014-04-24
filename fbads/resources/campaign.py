@@ -3,8 +3,8 @@ from fbads.resources.base import Resource
 
 
 class CampaignStatus(object):
-    ACTIVE = 1
-    PAUSED = 2
+    ACTIVE = 'ACTIVE'
+    PAUSED = 'PAUSED'
 
     choices = (
         (ACTIVE, u'Active'),
@@ -13,5 +13,4 @@ class CampaignStatus(object):
 
 
 class CampaignResource(Resource):
-    datetime_fields = ['start_time', 'end_time', 'updated_time', 'created_time']
-    cents_to_decimal = ['daily_budget', 'lifetime_budget']
+    pass

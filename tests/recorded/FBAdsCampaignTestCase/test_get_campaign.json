@@ -1,35 +1,137 @@
 [
     {
         "request": {
-            "body": null,
+            "body": null, 
             "headers": {
-                "Accept": "*/*",
-                "Accept-Encoding": "gzip, deflate, compress",
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
                 "Host": "graph.facebook.com"
-            },
-            "host": "graph.facebook.com",
-            "method": "GET",
-            "port": 443,
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
             "url": "/6015348517682?fields=name%2Cstart_time%2Cend_time%2Cdaily_budget%2Clifetime_budget"
-        },
+        }, 
         "response": {
-            "body_quoted_printable": "{\"name\":\"Test campaign\",\"start_time\":\"2014-03-11T07:31:05-0700\",\"end_time\":=\n\"2014-12-01T00:00:00-0800\",\"lifetime_budget\":50000,\"id\":\"6015348517682\"}",
+            "body_quoted_printable": "{\"name\":\"Test campaign\",\"start_time\":\"2014-03-11T07:31:05-0700\",\"end_time\":=\n\"2014-12-01T00:00:00-0800\",\"lifetime_budget\":50000,\"id\":\"6015348517682\"}", 
             "headers": {
-                "access-control-allow-origin": "*",
-                "cache-control": "private, no-cache, no-store, must-revalidate",
-                "connection": "keep-alive",
-                "content-length": "147",
-                "content-type": "application/json; charset=UTF-8",
-                "date": "Tue, 11 Mar 2014 14:35:00 GMT",
-                "etag": "\"ba612e04d18b1fd530d29bc6ca04295a3b9a0dd1\"",
-                "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
-                "pragma": "no-cache",
-                "x-fb-debug": "1mh7Gnu++xc4nidPLu0Np61OixM4TMx7hudjW19v/HE=",
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "147", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Tue, 11 Mar 2014 14:35:00 GMT", 
+                "etag": "\"ba612e04d18b1fd530d29bc6ca04295a3b9a0dd1\"", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "1mh7Gnu++xc4nidPLu0Np61OixM4TMx7hudjW19v/HE=", 
                 "x-fb-rev": "1155687"
-            },
+            }, 
             "status": {
-                "code": 200,
+                "code": 200, 
                 "message": ""
+            }
+        }
+    }, 
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
+            "url": "/6015348517682"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"error\":{\"message\":\"Invalid OAuth access token.\",\"type\":\"OAuthException\",\"=\ncode\":190}}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "no-store", 
+                "connection": "keep-alive", 
+                "content-length": "86", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 17 Apr 2014 18:15:06 GMT", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "www-authenticate": "OAuth \"Facebook Platform\" \"invalid_token\" \"Invalid OAuth access token.\"", 
+                "x-fb-debug": "g7p6yTAudtZGLfdJt3cOCGJzNU5QG+sm1aXkGoGwTms=", 
+                "x-fb-rev": "1210967"
+            }, 
+            "status": {
+                "code": 400, 
+                "message": "Bad Request"
+            }
+        }
+    }, 
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
+            "url": "/6016248666482"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"id\":\"6016248666482\"}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "22", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 17 Apr 2014 18:19:44 GMT", 
+                "etag": "\"88f5944d7f8a490e7c71a284b73c15700c67cdcd\"", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "Qrn2fQGvaLyut6gFX9CzWk+ilUyuH42pFJuZJiiZLGI=", 
+                "x-fb-rev": "1210967"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": "OK"
+            }
+        }
+    }, 
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
+            "url": "/6016248666482?fields=name"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"name\":\"Test campaign\",\"id\":\"6016248666482\"}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "45", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 17 Apr 2014 18:19:59 GMT", 
+                "etag": "\"905d33f62e281279a673f6bed5a7223ebd0c765a\"", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "c0TGS7RsFuaktY9xLWV6W6i1KQI3Ec6HP0rNggaaIcE=", 
+                "x-fb-rev": "1210967"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": "OK"
             }
         }
     }

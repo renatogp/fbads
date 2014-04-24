@@ -10,26 +10,26 @@
             "host": "graph.facebook.com", 
             "method": "GET", 
             "port": 443, 
-            "url": "/act_1378857852381224/adcampaigns?fields=name&limit=10"
+            "url": "/act_1378857852381224/adcampaign_groups?fields=name&limit=10"
         }, 
         "response": {
-            "body_quoted_printable": "{\"data\":[{\"name\":\"Test campaign\",\"id\":\"6015348517682\"}],\"paging\":{\"cursors\"=\n:{\"after\":\"NjAxNTM0ODUxNzY4Mg=3D=3D\",\"before\":\"NjAxNTM0ODUxNzY4Mg=3D=3D\"}},=\n\"count\":1,\"limit\":10,\"offset\":0}", 
+            "body_quoted_printable": "{\"data\":[{\"name\":\"Test campaign\",\"id\":\"6016248662482\"},{\"name\":\"Test campai=\ngn\",\"id\":\"6016248666482\"}],\"paging\":{\"cursors\":{\"before\":\"NjAxNjI0ODY2MjQ4M=\ng=3D=3D\",\"after\":\"NjAxNjI0ODY2NjQ4Mg=3D=3D\"}}}", 
             "headers": {
                 "access-control-allow-origin": "*", 
                 "cache-control": "private, no-cache, no-store, must-revalidate", 
                 "connection": "keep-alive", 
-                "content-length": "174", 
+                "content-length": "188", 
                 "content-type": "application/json; charset=UTF-8", 
-                "date": "Tue, 11 Mar 2014 22:00:51 GMT", 
-                "etag": "\"a9636c867b3898481e999f27493bd330088575d2\"", 
+                "date": "Thu, 17 Apr 2014 18:18:36 GMT", 
+                "etag": "\"bd51769a94037e942bcec8fd98cbfb61e73f124a\"", 
                 "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
                 "pragma": "no-cache", 
-                "x-fb-debug": "EmRW8cHBtRetLmUdE4VOPAO2Lqho9dgkClB5qjgJbZI=", 
-                "x-fb-rev": "1155687"
+                "x-fb-debug": "/2gbE6LYP+0PlKBRn7eFTAe1l9Pd1vMRt0IT1o47d7I=", 
+                "x-fb-rev": "1210967"
             }, 
             "status": {
                 "code": 200, 
-                "message": ""
+                "message": "OK"
             }
         }
     }

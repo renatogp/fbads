@@ -12,7 +12,7 @@ Create an ad group
    :param str name: Ad group name
    :param BidType bid_type: ``BidType.CPC``, ``BidType.CPM``, ``BidType.MULTI_PREMIUM``, ``BidType.ABSOLUTE_OCPM``, ``BidType.CPA`` (from ``fbads.resources.group.BidType``)
    :param BidInfo bid_info: bid - must be an BidInfo (``fbads.resources.group.BidInfo``) instance (see the examples below)
-   :param str campaign_id: Campaign ID
+   :param str set_id: Ad set ID
    :param str creative_id: Creative ID
    :param TargetingSpecs targeting_specs: a TargetingSpecs (``fbads.resources.group.TargetingSpecs``) instances - see the examples below
 
