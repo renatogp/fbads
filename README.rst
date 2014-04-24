@@ -5,7 +5,7 @@ fbads
 .. image:: https://api.travis-ci.org/rpedigoni/fbads.png
     :target: https://travis-ci.org/rpedigoni/fbads
 
-Python client for the Facebook Ads API. **Under development!**
+Python client for the Facebook Ads API. Works with the new ads schema (ad sets). **Under development!**
 
 
 Installation
