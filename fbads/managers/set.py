@@ -10,7 +10,11 @@ class SetManager(Manager):
     def _get_api_path(self, object_id):
         return '{0}'.format(object_id)
 
-    def list(self, fields=['id', 'name', 'start_time', 'end_time', 'daily_budget', 'lifetime_budget'], **kwargs):
+    def list(self, campaign_id=None, fields=['id', 'name', 'start_time', 'end_time', 'daily_budget', 'lifetime_budget'], **kwargs):
+        if campaign_id:
+            # filter by campaign id
+            return super(SetManager, self).list(fields=fields, api_path='{0}/adcampaigns'.format(campaign_id), **kwargs)
+
         return super(SetManager, self).list(fields=fields, **kwargs)
 
     def add(self, name, campaign_group_id, campaign_status, daily_budget=None, lifetime_budget=None, start_time=None, end_time=None, redownload=False):

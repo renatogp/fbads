@@ -38,10 +38,10 @@ class Manager(object):
 
         return url
 
-    def list(self, fields=[], limit=None):
+    def list(self, fields=[], limit=None, api_path=None):
         url = '{0}{1}?access_token={2}'.format(
             GRAPH_API_URL,
-            self._list_api_path(),
+            api_path or self._list_api_path(),
             self._api.access_token,
         )
 

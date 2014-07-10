@@ -34,6 +34,17 @@ class FBAdsSetTestCase(BaseTestCase):
 
             self.assertEqual(set_id, '6016248730082')
 
+    def test_list_by_campaign_id(self):
+        with self.replay():
+            fbads = FBAds(account_id='1441244262800708', access_token=self.get_test_access_token())
+            sets = fbads.set.list(campaign_id='6015012781014', fields=['name'], limit=2)
+            self.assertEqual(len(sets), 2)
+
+            adset = sets.pop()
+            self.assertEqual(adset.name, u'191901800')
+            self.assertEqual(adset.id, '6015012782014')
+
+
     def test_list_sets(self):
         with self.replay():
             fbads = FBAds(account_id='1378857852381224', access_token=self.get_test_access_token())

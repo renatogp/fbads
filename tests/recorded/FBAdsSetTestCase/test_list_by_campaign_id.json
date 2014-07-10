@@ -1,0 +1,36 @@
+[
+    {
+        "request": {
+            "body": null, 
+            "headers": {
+                "Accept": "*/*", 
+                "Accept-Encoding": "gzip, deflate, compress", 
+                "Host": "graph.facebook.com"
+            }, 
+            "host": "graph.facebook.com", 
+            "method": "GET", 
+            "port": 443, 
+            "url": "/6015012781014/adcampaigns?fields=name&limit=2"
+        }, 
+        "response": {
+            "body_quoted_printable": "{\"data\":[{\"name\":\"190369300\",\"id\":\"6015012781214\"},{\"name\":\"191901800\",\"id\"=\n:\"6015012782014\"}],\"paging\":{\"next\":\"https:\\/\\/graph.facebook.com\\/v1.0\\/60=\n15012781014\\/adcampaigns?access_token=3DCAAKt92vX5SoBAA3BFd6joSMqWPhmRYLxqX=\nYOliEZBJLpZAjCTXG7sKK2mUf77bMwsWpyMN2KwrUu8OkRe8FmG0V7XusI2SuVFtEFZAWuOlCTM=\n4CZCKJBqmRZAOt91VI7NdzzlHvQN4yPoox6ZAfuZBFhfeVK7sGF9npdU4YvZCHSZA2ZABM7zLc6=\nMBcnzsi8Jv0mAZD&fields=3Dname&limit=3D2&after=3DNjAxNTAxMjc4MjAxNA\\u00253D\\=\nu00253D\",\"cursors\":{\"before\":\"NjAxNTAxMjc4MTIxNA=3D=3D\",\"after\":\"NjAxNTAxMj=\nc4MjAxNA=3D=3D\"}}}", 
+            "headers": {
+                "access-control-allow-origin": "*", 
+                "cache-control": "private, no-cache, no-store, must-revalidate", 
+                "connection": "keep-alive", 
+                "content-length": "527", 
+                "content-type": "application/json; charset=UTF-8", 
+                "date": "Thu, 10 Jul 2014 14:33:56 GMT", 
+                "etag": "\"d11208d2260bb04cab48118fdf1c662b15a86fe8\"", 
+                "expires": "Sat, 01 Jan 2000 00:00:00 GMT", 
+                "pragma": "no-cache", 
+                "x-fb-debug": "0AIzSyzt1cn1/kTcCCedWqUFRB5ItOHFhlVSEA7Tl9BvAeD1YjcY4eZQNvilrQsUmg2yKNlNbEJMDPCQharwVA==", 
+                "x-fb-rev": "1323393"
+            }, 
+            "status": {
+                "code": 200, 
+                "message": "OK"
+            }
+        }
+    }
+]
