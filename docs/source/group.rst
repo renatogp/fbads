@@ -5,7 +5,7 @@ Ad groups
 Create an ad group
 ^^^^^^^^^^^^^^^^^^
 
-.. py:function:: fbads.group.add(name, bid_type, bid_info, campaign_id, creative_id, targeting_specs)
+.. py:function:: fbads.group.add(name, bid_type, bid_info, set_id, creative_id, targeting_specs)
 
    Add a new ad group to the ad account
 
@@ -54,7 +54,7 @@ Example: ::
             BidType.CPC,
             clicks=Decimal('0.25'),
         ),
-        campaign_id='an_ad_campaign_id',
+        set_id='an_ad_set_id',
         creative_id='an_ad_creative_id',
         targeting_specs=targeting_specs,
     )
